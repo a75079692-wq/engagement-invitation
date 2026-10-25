@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8ed">
+  <meta name="description" content="Arya A S and Neeraj J A's engagement invitation, 13 December 2026.">
+  <title>Arya &amp; Neeraj | Engagement Invitation</title>
+  <style>
+    :root { --cream:#fff8ed; --paper:#fffdf7; --gold:#b68a46; --brown:#874d39; --text:#563b2c; }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; padding:22px 12px; min-height:100vh; color:var(--text);
+      background:radial-gradient(circle at top, #fffdf8, #f7ead7);
+      font-family:Georgia, "Times New Roman", serif; text-align:center;
+    }
+    .card {
+      max-width:540px; margin:0 auto; padding:34px 22px; overflow:hidden;
+      border:1px solid #d5b477; border-radius:220px 220px 20px 20px;
+      background:linear-gradient(160deg, var(--paper), #fff3df);
+      box-shadow:0 10px 32px #78502b20;
+    }
+    .flowers { color:var(--gold); font-size:27px; letter-spacing:5px; }
+    .eyebrow { margin:20px 0 8px; color:#96703d; font:12px/1.6 Arial,sans-serif; letter-spacing:3px; text-transform:uppercase; }
+    h1 { margin:16px 0 8px; color:var(--brown); font-size:clamp(34px, 9vw, 52px); font-weight:normal; line-height:1.18; }
+    .amp { display:block; margin:4px 0; color:var(--gold); font-size:28px; font-style:italic; }
+    .intro { max-width:360px; margin:18px auto; font-size:16px; line-height:1.8; }
+    .ornament { margin:22px auto; color:var(--gold); letter-spacing:5px; }
+    .label { margin:12px 0; color:#96703d; font:12px/1.6 Arial,sans-serif; letter-spacing:3px; text-transform:uppercase; }
+    .date { margin:8px 0; color:var(--brown); font-size:24px; line-height:1.5; }
+    .time { margin:12px 0; font-size:18px; line-height:1.7; }
+    .family { margin:17px auto; font-size:15px; line-height:1.8; }
+    .family strong { color:var(--brown); font-weight:normal; }
+    .venue { margin:10px auto; font-size:19px; line-height:1.6; }
+    .sub { font:14px/1.7 Arial,sans-serif; }
+    .countdown { display:flex; justify-content:center; flex-wrap:wrap; gap:9px; margin:20px 0; }
+    .count-box { min-width:65px; padding:12px 8px; border:1px solid #e4cfaa; border-radius:10px; background:#fffaf1; }
+    .count-box strong { display:block; color:var(--brown); font:normal 23px Georgia,serif; }
+    .count-box span { font:10px Arial,sans-serif; letter-spacing:1px; text-transform:uppercase; }
+    .btn {
+      display:inline-block; margin:7px 4px; padding:12px 19px; border:1px solid #a77b39;
+      border-radius:30px; background:var(--brown); color:#fffaf1; font:14px Georgia,serif;
+      text-decoration:none; cursor:pointer;
+    }
+    .btn.secondary { background:transparent; color:var(--brown); }
+    .btn:focus-visible { outline:3px solid #c6a16b; outline-offset:3px; }
+    .footer { margin-top:25px; color:#96703d; font-size:13px; font-style:italic; line-height:1.8; }
+    @media(max-width:360px) { .card { padding:30px 13px; } .count-box { min-width:58px; } }
+    @media(prefers-reduced-motion:no-preference) {
+      .card { animation:appear 1s ease both; }
+      @keyframes appear { from {opacity:0; transform:translateY(12px)} to {opacity:1; transform:translateY(0)} }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="flowers" aria-hidden="true">❀ ✿ ❀</div>
+    <p class="eyebrow">With the blessings of our families</p>
+    <p class="intro">Together with our parents, we joyfully invite you to celebrate the beginning of our journey together.</p>
+
+    <h1>Arya A S <span class="amp">&amp;</span> Neeraj J A</h1>
+    <div class="ornament" aria-hidden="true">❧ ❦ ❧</div>
+
+    <p class="label">Engagement Ceremony</p>
+    <p class="date">Sunday, 13 December 2026</p>
+    <p class="time">Muhurtham<br><strong>12:10 PM – 12:55 PM</strong></p>
+
+    <div class="ornament" aria-hidden="true">✧ ❀ ✧</div>
+    <p class="label">With love from our families</p>
+    <div class="family"><strong>Arya's parents</strong><br>Jayakumar &amp; Ajitha</div>
+    <div class="family"><strong>Neeraj's parents</strong><br>Anilkumar &amp; Sudhakumari</div>
+
+    <div class="ornament" aria-hidden="true">❧ ❦ ❧</div>
+    <p class="label">Venue</p>
+    <p class="venue">Panimoola Devi Temple<br><span class="sub">Pothencode, Thiruvananthapuram</span></p>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Panimoola+Devi+Temple+Pothencode" target="_blank" rel="noopener noreferrer">📍 Get Directions</a>
+
+    <p class="label">Counting down to our special day</p>
+    <div class="countdown" aria-label="Countdown to engagement">
+      <div class="count-box"><strong id="days">--</strong><span>Days</span></div>
+      <div class="count-box"><strong id="hours">--</strong><span>Hours</span></div>
+      <div class="count-box"><strong id="minutes">--</strong><span>Minutes</span></div>
+      <div class="count-box"><strong id="seconds">--</strong><span>Seconds</span></div>
+    </div>
+    <p id="eventMessage" class="sub" aria-live="polite"></p>
+
+    <button class="btn secondary" id="musicButton" type="button">♫ Play music</button>
+    <p id="musicMessage" class="sub" aria-live="polite">Soft flute–veena instrumental: add your chosen audio file named song.mp3.</p>
+    <audio id="music" loop preload="none"><source src="song.mp3" type="audio/mpeg"></audio>
+
+    <div class="ornament" aria-hidden="true">✧ ❀ ✧</div>
+    <p class="footer">Your presence and blessings mean the world to us.<br>With love, Arya &amp; Neeraj</p>
+    <div class="flowers" aria-hidden="true">❀ ✿ ❀</div>
+  </main>
+
+  <script>
+    // 13 December 2026, 12:10 PM Indian Standard Time
+    const eventDate = new Date("2026-12-13T12:10:00+05:30").getTime();
+    const $ = id => document.getElementById(id);
+
+    function updateCountdown() {
+      const remaining = eventDate - Date.now();
+      if (remaining <= 0) {
+        ["days", "hours", "minutes", "seconds"].forEach(id => $(id).textContent = "0");
+        $("eventMessage").textContent = "Today is our special day! ❤️";
+        return;
+      }
+      $("days").textContent = Math.floor(remaining / 86400000);
+      $("hours").textContent = Math.floor((remaining % 86400000) / 3600000);
+      $("minutes").textContent = Math.floor((remaining % 3600000) / 60000);
+      $("seconds").textContent = Math.floor((remaining % 60000) / 1000);
+      $("eventMessage").textContent = "";
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    const music = $("music");
+    const musicButton = $("musicButton");
+    const musicMessage = $("musicMessage");
+    musicButton.addEventListener("click", async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicButton.textContent = "♫ Pause music";
+          musicMessage.textContent = "Music is playing.";
+        } catch (error) {
+          musicMessage.textContent = "No audio found yet. Upload a permitted MP3 named song.mp3 beside index.html.";
+        }
+      } else {
+        music.pause();
+        musicButton.textContent = "♫ Play music";
+        musicMessage.textContent = "Music paused.";
+      }
+    });
+    music.addEventListener("error", () => {
+      musicMessage.textContent = "No song added yet. Upload a permitted MP3 named song.mp3 beside index.html.";
+    });
+  </script>
+</body>
+</html>
